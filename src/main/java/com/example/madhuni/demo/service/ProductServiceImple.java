@@ -17,4 +17,8 @@ public class ProductServiceImple implements ProductService  {
         System.out.println("came");
         return productReopository.findAll();
     }
+    @Override
+    public Product saveProduct(Product product) {
+        return productReopository.save(product);
+    }
 }
