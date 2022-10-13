@@ -14,6 +14,7 @@ public class ProductServiceImple implements ProductService  {
 
     @Override
     public List<Product> getAllProducts() {
+        System.out.println("came");
         return productReopository.findAll();
     }
 }
