@@ -11,6 +11,6 @@ public interface ProductService {
     public Product saveProduct(Product product);
     public Product updateProduct(Product product);
     public Product addProduct(Product product);
-    public String deleteProduct(int product_id);
+    public String deleteProduct(long product_id);
 }
 

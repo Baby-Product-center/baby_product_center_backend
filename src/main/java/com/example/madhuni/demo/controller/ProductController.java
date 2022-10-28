@@ -7,7 +7,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
@@ -19,11 +18,6 @@ public class ProductController {
     @GetMapping("/getall")
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public List<Product> getAllProducts(){return productService.getAllProducts();}
-
-    @GetMapping("/getsingle")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
-    public Optional<Product> getSingleProduct(@RequestBody int pid){return productService.getProduct(pid);}
-
 
     @PutMapping("/updateproduct")
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
@@ -40,6 +34,5 @@ public class ProductController {
     public String deleteProduct(@RequestBody int product_id){
         return productService.deleteProduct(product_id);
     }
-
 
 }

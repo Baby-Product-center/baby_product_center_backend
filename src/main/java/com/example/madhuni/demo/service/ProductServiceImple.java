@@ -43,8 +43,8 @@ public class ProductServiceImple implements ProductService  {
     }
 
     @Override
-    public String deleteProduct(int product_id) {
-        productReopository.deleteById(product_id);
+    public String deleteProduct(long product_id) {
+        productReopository.deleteById((int) product_id);
         return "product was deleted";
     }
 }

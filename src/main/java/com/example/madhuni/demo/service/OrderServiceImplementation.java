@@ -18,7 +18,7 @@ public class OrderServiceImplementation implements  OrderService{
 
     @Override
     public void updateDeliveryStatus(int oid) {
-     orderRepository.updateDelveryStatus(oid);
+    // orderRepository.updateDelveryStatus(oid);
     }
 
 }
